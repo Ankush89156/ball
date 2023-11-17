@@ -1,0 +1,11 @@
+type List = 
+ opt record {
+       principal;
+       List;
+     };
+service : {
+  getCertificate: (principal) -> (text);
+  getId: () -> (principal);
+  getUsers: () -> (List) query;
+  registerUser: (text) -> (text);
+}
